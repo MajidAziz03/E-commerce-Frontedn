@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 import { Search, ShoppingCartOutlined } from "@mui/icons-material";
 import { Badge } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
@@ -77,14 +78,14 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>Majid.</Logo>
+          <Link style={{textDecoration:"none", color:"inherit"}} to='/'><Logo>Majid.</Logo></Link>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <Link style={{textDecoration:"none", color:"inherit"}} to='/register'><MenuItem>REGISTER</MenuItem></Link>
+          <Link style={{textDecoration:"none", color:"inherit"}} to='/login'><MenuItem>SIGN IN</MenuItem></Link>
           <MenuItem>
             <Badge badgeContent={3} color="primary">
-              <ShoppingCartOutlined />
+              <Link style={{textDecoration:"none", color:"inherit"}} to='/cart'><ShoppingCartOutlined /></Link>
             </Badge>
           </MenuItem>
         </Right>
