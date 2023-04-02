@@ -6,10 +6,11 @@ import {
 } from 'react-router-dom'
 import Home from './pages/Home.jsx';
 import Products from './components/Products.jsx';
-import Product from './components/Product.jsx';
 import Cart from './pages/Cart.jsx';
 import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
+import ProductList from './pages/ProductList.jsx';
+import Product from './pages/Product.jsx';
 
 
 
@@ -18,6 +19,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path='/products' element={<ProductList />} />
         <Route path="/products/:category" element={<Products />} />
         <Route path="/product/:id" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
