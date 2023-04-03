@@ -13,7 +13,7 @@ export const counterSlice = createSlice({
         addToCart: (state, action) => {
             state.products.push(action.payload)
             state.quantity += 1
-            state.total += action.payload.price
+            state.total += action.payload.price * action.payload.quantity
         },
     },
 })

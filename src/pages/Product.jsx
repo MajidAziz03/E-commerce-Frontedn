@@ -148,7 +148,7 @@ const Product = () => {
 
 
   const handleCart = () => {
-    dispatch(addToCart({ ...product, quantity, size, color, price: product.price * quantity }))
+    dispatch(addToCart({ ...product, quantity, size, color,  }))
   }
 
 
